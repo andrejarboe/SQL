@@ -38,3 +38,9 @@ FROM
 WHERE 
     color = "red";
 
+-- total number of items per color
+SELECT 
+    color, SUM(quanity)
+FROM 
+    store
+GROUP BY (color);
