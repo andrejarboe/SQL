@@ -6,7 +6,7 @@ CREATE TABLE store (
     id INTEGER PRIMARY KEY, 
     item Text, 
     color Text, 
-    quanity INTEGER, 
+    quantity INTEGER, 
     price INTEGER
 );
 
@@ -40,7 +40,7 @@ WHERE
 
 -- total number of items per color
 SELECT 
-    color, SUM(quanity)
+    color, SUM(quantity) "Quantity of color"
 FROM 
     store
 GROUP BY (color);
