@@ -30,7 +30,7 @@ Insert INTO store VALUES (15, "boots", "black", 39, 56);
 SELECT * FROM store 
 ORDER BY Price DESC;
 
--- dispaly avg price of red items
+-- display avg price of red items
 SELECT 
     AVG(price) "Avg price of Red items"
 FROM 
