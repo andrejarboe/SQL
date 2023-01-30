@@ -12,7 +12,7 @@ CREATE TABLE store (
 
 Insert INTO store VALUES (1, "hat", "red", 45, 213);
 Insert INTO store VALUES (2, "sherpa jacket", "blue", 7, 35);
-Insert INTO store VALUES (3, "shirt", "Orange", 34, 145);
+Insert INTO store VALUES (3, "shirt", "orange", 34, 145);
 Insert INTO store VALUES (4, "socks", "green", 7, 45);
 Insert INTO store VALUES (5, "winter jacket", "yellow", 7, 23);
 Insert INTO store VALUES (6, "undershirt", "black", 64, 4);
@@ -26,4 +26,6 @@ Insert INTO store VALUES (13, "shoes", "white", 12, 478);
 Insert INTO store VALUES (14, "dress", "blue", 57, 45);
 Insert INTO store VALUES (15, "boots", "black", 39, 56);
 
-SELECT price, item FROM store GROUP BY price;
+-- display the database ordered by price. 
+SELECT * FROM store 
+ORDER BY Price DESC;
