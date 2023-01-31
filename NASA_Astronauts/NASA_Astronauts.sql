@@ -3,6 +3,8 @@
 
 
 
+
+-- calculates the average, maximum, and minimum number of space flights per astronaut
 select 
     avg(Space_Flights), 
     max(Space_Flights),
@@ -11,6 +13,7 @@ from astronauts;
 -- select avg(Space_Flight_hr) from astronauts;
 -- select avg(Space_Walks) from astronauts;
 
+-- calculates the average number of space flights per astronaut by their military rank, and only includes those with at least 2 space flights
 select 
     Military_Rank, 
     avg(Space_Flights), 
@@ -20,13 +23,14 @@ from astronauts
 group by Military_Rank
 having min(Space_Flights) >= 2;
 
+-- groups astronauts by their undergraduate major and shows 50 results
 select 
     name,
-    Undergraduate_Major
-    
+    Undergraduate_Major 
 from astronauts
 group by Undergraduate_Major limit 50;
 
+-- categorizes the undergraduate majors of astronauts into "Engineering" or "Other" and shows the count of each category
 select count(*),
     case
         when Undergraduate_Major like "%engineering%"then "Engineering"
@@ -35,6 +39,7 @@ select count(*),
 from astronauts
 group by major;
 
+-- groups astronauts by their number of space flights, who have engineering major and are female
 select
     name,
     Space_Flights,
